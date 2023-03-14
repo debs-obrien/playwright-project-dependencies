@@ -7,9 +7,10 @@ export const STORAGE_STATE = path.join(__dirname, 'playwright/.auth/user.json');
 
 export default defineConfig({
   testDir: './tests',
-  reporter: 'html',
+  reporter: [['list'], ['html']],
   use: {
     baseURL: 'https://en.wikipedia.org',
+    trace: 'on-first-retry',
   },
 
   projects: [
