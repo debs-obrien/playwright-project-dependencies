@@ -81,13 +81,13 @@ Once you have run the tests you can see a report of the tests by running the `sh
 npx playwright show-report
 ```
 
-To see a trace of your tests locally including the setup tests run the tests with the flag `--trace on`
+To see a trace of your tests locally including the setup tests run the tests with the flag `--trace on` and then open the report and click on the trace icon.
 
 ```bash
 npx playwright test --trace on
 ```
 
-![trace viewer showing trace of the login test](https://user-images.githubusercontent.com/13063165/224748739-cfbb9474-b588-40b6-af9e-1bbd43a5004c.png)
+![trace viewer showing trace of the login test](https://user-images.githubusercontent.com/13063165/225040918-f5316acc-e092-4e09-9da0-2d826dced162.png)
 
 ## Running the tests on CI
 
