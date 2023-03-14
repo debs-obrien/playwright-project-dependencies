@@ -8,8 +8,13 @@ export const STORAGE_STATE = path.join(__dirname, 'playwright/.auth/user.json');
 export default defineConfig({
   testDir: './tests',
   reporter: [['list'], ['html']],
+  /* Retry on CI only */
+  retries: process.env.CI ? 2 : 0,
+  /* Run tests in files in parallel */
+  fullyParallel: true,
   use: {
     baseURL: 'https://en.wikipedia.org',
+    // run traces on the first retry of a failed test
     trace: 'on-first-retry',
   },
 
