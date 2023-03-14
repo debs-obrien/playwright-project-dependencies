@@ -12,6 +12,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Run tests in files in parallel */
   fullyParallel: true,
+
   use: {
     baseURL: 'https://en.wikipedia.org',
     // run traces on the first retry of a failed test
@@ -24,7 +25,7 @@ export default defineConfig({
       name: 'setup',
       testMatch: '**/*.setup.ts',
     },
-    // this project depends on the setup project
+    // this project depends on the setup project and matches all tests ending with loggedin.spec.ts
     {
       name: 'e2e tests logged in',
       testMatch: '**/*loggedin.spec.ts',
@@ -33,7 +34,7 @@ export default defineConfig({
         storageState: STORAGE_STATE,
       },
     },
-    // this project runs all tests expect ones for logged in
+    // this project runs all tests expect the setup and logged in tests
     {
       name: 'e2e tests',
       testIgnore: ['**/*loggedin.spec.ts', '**/*.setup.ts'],
