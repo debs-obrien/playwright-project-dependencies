@@ -18,7 +18,7 @@ projects: [
         storageState: STORAGE_STATE,
       },
     },
-    // this project runs all tests expect ones for logged in
+    // this project runs all tests except ones for logged in
     {
       name: 'e2e tests',
       testIgnore: ['**/*loggedin.spec.ts', '**/*.setup.ts'],
