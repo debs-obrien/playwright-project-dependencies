@@ -34,7 +34,7 @@ export default defineConfig({
         storageState: STORAGE_STATE,
       },
     },
-    // this project runs all tests expect the setup and logged in tests
+    // this project runs all tests except the setup and logged in tests
     {
       name: 'e2e tests',
       testIgnore: ['**/*loggedin.spec.ts', '**/*.setup.ts'],
