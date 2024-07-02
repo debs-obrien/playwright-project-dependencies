@@ -8,7 +8,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.32.0-alpha-mar-14-2023"
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.14.9"
   },
   "dependencies": {
     "dotenv": "^16.0.3"
